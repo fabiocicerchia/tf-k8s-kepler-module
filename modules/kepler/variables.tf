@@ -5,13 +5,13 @@ variable "kubeconfig_path" {
 }
 
 variable "release_name" {
-  description = "Helm release name for Kepler"
+  description = "Helm release name for Kepler Operator"
   type        = string
   default     = "kepler-operator"
 }
 
 variable "namespace" {
-  description = "Kubernetes namespace for Kepler"
+  description = "Kubernetes namespace for Kepler Operator"
   type        = string
   default     = "kepler-operator"
 }
@@ -23,13 +23,13 @@ variable "chart_version" {
 }
 
 variable "values" {
-  description = "Helm values for Kepler deployment"
+  description = "Helm values for Kepler Operator deployment"
   type        = any
   default     = {}
 }
 
 variable "deploy_powermonitor" {
-  description = "Deploy Kepler PowerMonitor CRD"
+  description = "Deploy the Kepler PowerMonitor resource"
   type        = bool
   default     = true
 }

@@ -1,14 +1,14 @@
 output "namespace" {
-  description = "Kubernetes namespace where Kepler is deployed"
-  value       = helm_release.kepler_operator.namespace
+  description = "The namespace where Kepler is deployed"
+  value       = module.kepler.namespace
 }
 
 output "release_name" {
-  description = "Helm release name of Kepler Operator"
-  value       = helm_release.kepler_operator.name
+  description = "The Helm release name of Kepler"
+  value       = module.kepler.release_name
 }
 
-output "chart_version" {
-  description = "Chart version of Kepler deployment"
-  value       = helm_release.kepler_operator.version
+output "version" {
+  description = "The version of Kepler deployed"
+  value       = module.kepler.version
 }
