@@ -16,7 +16,7 @@ Kepler tracks environmental impact and power consumption of your Kubernetes clus
 
 ```hcl
 module "kepler" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-kepler.git?ref=main"
+  source = "fabiocicerchia/kepler/helm"
 
   release_name    = "kepler-operator"
   namespace       = "kepler-operator"
@@ -60,7 +60,7 @@ This module automatically deploys:
 
 ```hcl
 module "kepler" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-kepler.git?ref=main"
+  source = "fabiocicerchia/kepler/helm"
 }
 ```
 
@@ -68,7 +68,7 @@ module "kepler" {
 
 ```hcl
 module "kepler" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-kepler.git?ref=main"
+  source = "fabiocicerchia/kepler/helm"
 
   deploy_powermonitor = false
 }
@@ -78,7 +78,7 @@ module "kepler" {
 
 ```hcl
 module "kepler" {
-  source = "git::https://github.com/fabiocicerchia/terraform-helm-kepler.git?ref=main"
+  source = "fabiocicerchia/kepler/helm"
 
   chart_version   = "1.0.0"
 }
