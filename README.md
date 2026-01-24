@@ -1,6 +1,20 @@
-# Kepler Environmental Impact Module
+# Terraform Module for Kepler
 
 Terraform module to deploy Kepler (Kubernetes Environmental Power Profiling Operator) on Kubernetes using Helm.
+
+## Why This Matters
+
+Understanding the energy footprint of your workloads is essential for meaningful sustainability improvements. Without accurate power consumption data at the container and pod level, efforts to reduce environmental impact are based on assumptions rather than facts.
+
+Kepler (Kubernetes-based Efficient Power Level Exporter) provides:
+
+* 🔌 **Container-level power metrics** showing actual energy consumption
+* 📊 **Real-time monitoring** of power usage across your entire cluster
+* 🎯 **Workload comparison** to identify energy-inefficient applications
+* 💡 **Actionable insights** for reducing energy waste
+* 📈 **Carbon estimation** based on actual power consumption
+
+By making power consumption visible at the workload level, Kepler enables teams to identify inefficiencies, optimise resource allocation, and make data-driven decisions about sustainability—transforming energy efficiency from guesswork into measurable engineering practice.
 
 ## Overview
 
@@ -43,7 +57,7 @@ module "kepler" {
 
 ## Requirements
 
-- Terraform >= 1.0
+- Terraform >= 1.0 or OpenTofu >= 1.6
 - Helm >= 2.0
 - Kubernetes v1.24+
 - kubectl configured to access your cluster
@@ -102,3 +116,7 @@ kubectl logs -n kepler-operator -l app=kepler
 - [Kepler Documentation](https://sustainable-computing.io/kepler/)
 - [Kepler Operator GitHub](https://github.com/sustainable-computing-io/kepler-operator)
 - [Kepler Helm Chart](https://github.com/sustainable-computing-io/kepler)
+
+## License
+
+MIT
