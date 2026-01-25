@@ -26,6 +26,16 @@ Kepler tracks environmental impact and power consumption of your Kubernetes clus
 - **PowerMonitor Resources**: Optional PowerMonitor for detailed power metrics
 - **Cert Manager Integration**: Automatically deploys cert-manager as a dependency
 
+## Dependencies
+
+**Important:** Kepler requires both Prometheus and cert-manager to function properly:
+
+1. **Prometheus**: Kepler exports metrics to Prometheus for monitoring. Ensure you have Prometheus deployed in your cluster.
+2. **cert-manager**: Kepler requires [cert-manager](https://cert-manager.io/) to be installed before deployment. Without cert-manager, Kepler will not function properly. Install it using:
+```bash
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.18.2/cert-manager.yaml
+```
+
 ## Quick Start
 
 ```hcl
